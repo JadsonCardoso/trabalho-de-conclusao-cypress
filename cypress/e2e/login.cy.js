@@ -30,7 +30,7 @@ describe('Testes referente ao Login do usuário', () => {
     })
 
 
-    it.only('Sair do usuário', () => {
+    it('Sair do usuário', () => {
         cy.url().should('includes', 'login')
         Login.fazerlogin()
 
@@ -38,6 +38,6 @@ describe('Testes referente ao Login do usuário', () => {
 
         Menu.sairDaAplicacao()
         cy.url().should('includes', 'login')
-        cy.get('input[data-qa="login-emaila"]').should('be.visible')
+        cy.get('input[data-qa="login-email"]').should('be.visible')
     })
 })
