@@ -1,4 +1,4 @@
-Trabalho Final - Testes E2E com Cypress
+# Trabalho Final - Testes E2E com Cypress
 
 Este projeto tem como objetivo realizar testes end-to-end (E2E) utilizando o Cypress, com geração de relatórios automatizados por meio do cypress-mochawesome-reporter e gerenciamento de variáveis de ambiente com dotenv.
 
@@ -22,7 +22,7 @@ Criar o arquivo .env
 
 - Crie um arquivo chamado .env na raiz do projeto e adicione a variável de ambiente usada pelo Cypress:
 
-BASE_URL_PADRAO=https://www.automationexercise.com
+BASE_URL_PADRAO=https://www.automationexercise.com/
 
 Executando os Testes
 - Abrir o Cypress em modo interativo

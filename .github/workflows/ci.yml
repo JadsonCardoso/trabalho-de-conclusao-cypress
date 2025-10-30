@@ -1,0 +1,37 @@
+name: Web E2E Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        run: node --version
+
+      - name: Verificando a versão do Node.js
+        run: node --version
+
+      - name: Instalando dependências
+        run: npm install
+
+      - name: Criar .env
+        run: |
+          echo "BASE_URL_PADRAO=${{ secrets.BASE_URL_PADRAO }}" >> .env
+
+      - name: Executando testes E2E com Cypress
+        run: npx cypress run
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: relatorios
+          path: |
+            cypress/reports
+
+
+            
