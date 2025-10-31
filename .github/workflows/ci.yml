@@ -29,5 +29,5 @@ jobs:
           name: relatorios
           path: |
             cypress/reports
-            cypress/sreenshots
+            cypress/screenshots
             cypress/videos
