@@ -10,9 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        run: node --version
-
       - name: Verificando a versão do Node.js
         run: node --version
 
