@@ -31,7 +31,8 @@ jobs:
         with:
           name: relatorios
           path: |
-            cypress/reports
+            cypress/reports/html/index.html
+
 
 
             
