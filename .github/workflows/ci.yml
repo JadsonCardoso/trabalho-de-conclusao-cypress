@@ -28,7 +28,9 @@ jobs:
 
       - name: Gerar relatório HTML
         run: |
-          npx mochawesome-report-generator cypress/reports/html --reportFilename index.html
+          npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json
+          npx mochawesome-report-generator cypress/reports/report.json --reportDir cypress/reports --reportFilename index.html
+
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
